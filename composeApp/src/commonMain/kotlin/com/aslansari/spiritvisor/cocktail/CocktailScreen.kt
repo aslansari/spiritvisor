@@ -5,18 +5,23 @@ import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.material.Button
 import androidx.compose.material.Text
-import androidx.compose.runtime.Composable
-import androidx.compose.runtime.collectAsState
-import androidx.compose.runtime.getValue
+import androidx.compose.runtime.*
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.lifecycle.viewmodel.compose.viewModel
 
 @Composable
 internal fun CocktailRoute(
+    args: CocktailArgs,
     navigateBack: () -> Unit,
     viewModel: CocktailViewModel = viewModel { CocktailViewModel() }
 ) {
+    val argCategory by rememberUpdatedState(args)
+
+    LaunchedEffect(argCategory) {
+        viewModel.updateArgs(argCategory)
+    }
+
     val uiState by viewModel.uiState.collectAsState()
 
     CocktailScreen(
@@ -35,6 +40,7 @@ internal fun CocktailScreen(
         Column {
             // Add content here
             Text("Cocktail Screen")
+            Text("Category is ${uiState.category}")
             Button(onClick = onBackClick) {
                 Text("Navigate to Home")
             }

@@ -1,5 +1,3 @@
-@file:OptIn(ExperimentalLayoutApi::class)
-
 package com.aslansari.spiritvisor.home
 
 import androidx.compose.foundation.layout.*
@@ -16,8 +14,10 @@ import androidx.lifecycle.viewmodel.compose.viewModel
 
 @Composable
 internal fun HomeRoute(
-    navigateToDetail: () -> Unit,
-    viewModel: HomeViewModel = viewModel { HomeViewModel() },
+    navigateToDetail: (String) -> Unit,
+    viewModel: HomeViewModel = viewModel {
+        HomeViewModel()
+    },
 ) {
     val uiState by viewModel.uiState.collectAsState()
 
@@ -27,9 +27,10 @@ internal fun HomeRoute(
     )
 }
 
+@OptIn(ExperimentalLayoutApi::class)
 @Composable
 internal fun HomeScreen(
-    onClick: () -> Unit,
+    onClick: (String) -> Unit,
     uiState: HomeUiState,
     modifier: Modifier = Modifier,
 ) {
@@ -46,15 +47,15 @@ internal fun HomeScreen(
             verticalArrangement = Arrangement.spacedBy(16.dp),
             maxItemsInEachRow = 3,
         ) {
-            FlavorCategoryButton("Sour", onClick = {})
-            FlavorCategoryButton("Sweet", onClick = {})
-            FlavorCategoryButton("Salty", onClick = {})
-            FlavorCategoryButton("Spicy", onClick = {})
-            FlavorCategoryButton("Bitter", onClick = { onClick() })
-            FlavorCategoryButton("Herbal", onClick = {})
-            FlavorCategoryButton("Fruity", onClick = {})
-            FlavorCategoryButton("Smoky", onClick = {})
-            FlavorCategoryButton("Umami", onClick = {})
+            FlavorCategoryButton("Sour", onClick = { onClick("Sour") })
+            FlavorCategoryButton("Sweet", onClick = { onClick("Sweet") })
+            FlavorCategoryButton("Salty", onClick = { onClick("Salty") })
+            FlavorCategoryButton("Spicy", onClick = { onClick("Spicy") })
+            FlavorCategoryButton("Bitter", onClick = { onClick("Bitter") })
+            FlavorCategoryButton("Herbal", onClick = { onClick("Herbal") })
+            FlavorCategoryButton("Fruity", onClick = { onClick("Fruity") })
+            FlavorCategoryButton("Smoky", onClick = { onClick("Smoky") })
+            FlavorCategoryButton("Umami", onClick = { onClick("Umami") })
         }
     }
 }

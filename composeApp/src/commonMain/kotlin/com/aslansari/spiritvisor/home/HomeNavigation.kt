@@ -14,7 +14,7 @@ fun NavController.navigateToHome(
 }
 
 fun NavGraphBuilder.home(
-    navigateToDetail: () -> Unit,
+    navigateToDetail: (String) -> Unit,
 ) {
     composable(homeRoute) {
         HomeRoute(

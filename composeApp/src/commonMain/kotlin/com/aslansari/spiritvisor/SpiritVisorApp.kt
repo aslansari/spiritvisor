@@ -2,6 +2,8 @@
 
 package com.aslansari.spiritvisor
 
+import androidx.compose.animation.EnterTransition
+import androidx.compose.animation.ExitTransition
 import androidx.compose.foundation.layout.ExperimentalLayoutApi
 import androidx.compose.foundation.layout.padding
 import androidx.compose.material.Scaffold
@@ -35,6 +37,8 @@ internal fun SpiritVisorApp(
             navController = navController,
             startDestination = homeRoute,
             modifier = Modifier.padding(innerPadding),
+            enterTransition = { EnterTransition.None },
+            exitTransition = { ExitTransition.KeepUntilTransitionsFinished },
         ) {
             // Add destinations here
             home(navigateToDetail = navController::navigateToCocktail)
