@@ -1,3 +1,12 @@
+
+🚧 This repository is in early stages of development at this time. 🚧
+
+# SpiritVisor
+
+This is a simple app for advising you on what to drink based on your mood and flavor preferences.
+
+## Tech Stack
+
 This is a Kotlin Multiplatform project targeting Android, iOS, Web, Desktop, Server.
 
 * `/composeApp` is for code that will be shared across your Compose Multiplatform applications.
