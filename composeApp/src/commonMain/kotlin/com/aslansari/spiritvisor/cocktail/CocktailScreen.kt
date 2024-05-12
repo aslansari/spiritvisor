@@ -39,7 +39,6 @@ internal fun CocktailScreen(
     Box(modifier = modifier.fillMaxSize(), contentAlignment = Alignment.Center) {
         Column {
             // Add content here
-            Text("Cocktail Screen")
             Text("Category is ${uiState.category}")
             Button(onClick = onBackClick) {
                 Text("Navigate to Home")
