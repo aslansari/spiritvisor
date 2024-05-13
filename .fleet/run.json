@@ -1,0 +1,14 @@
+{
+    "configurations": [
+        {
+            "type": "xcode-app",
+            "name": "Run on iPhone 15", 
+            "buildTarget": {
+                "project": "iosApp",
+                "target": "iosApp",
+            },
+            "configuration": "Debug",
+            "destination": "iOS Device",
+        }
+    ]
+}
