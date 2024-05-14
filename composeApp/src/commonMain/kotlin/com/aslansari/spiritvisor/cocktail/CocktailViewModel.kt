@@ -31,7 +31,7 @@ class CocktailService(
     private val client: HttpClient = HttpClient(),
 ) {
     suspend fun fetchCocktail(category: String): String {
-        val response = client.get("https://hacker-news.firebaseio.com/v0/item/8863.json?print=pretty")
+        val response = client.get("https://hacker-news.firebaseio.com/v0/item/40358041.json?print=pretty")
         val string = Json { ignoreUnknownKeys = true }.decodeFromString(response.bodyAsText()) as Response
         return string.title
     }
