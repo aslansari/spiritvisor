@@ -65,7 +65,7 @@ internal fun CocktailScreen(
             Text("Category is ${uiState.category}")
             Spacer(Modifier.size(12.dp))
             Button(onClick = onBackClick) {
-                Text("Navigate to Home")
+                Text("Go Back")
             }
         }
     }
