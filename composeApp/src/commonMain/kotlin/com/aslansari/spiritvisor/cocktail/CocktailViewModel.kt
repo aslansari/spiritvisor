@@ -19,10 +19,11 @@ class CocktailViewModel : BaseViewModel<CocktailUIState>() {
     override fun createInitialState(): CocktailUIState = CocktailUIState()
 
     fun updateArgs(args: CocktailArgs) {
+        setState { copy(loading = true) }
         setState { copy(category = args.category) }
         viewModelScope.launch(Dispatchers.Default) {
             val title = cocktailService.fetchCocktail(args.category)
-            setState { copy(title = title) }
+            setState { copy(title = title, loading = false) }
         }
     }
 }
