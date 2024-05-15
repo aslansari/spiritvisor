@@ -32,6 +32,7 @@ internal fun CocktailRoute(
 
     CocktailScreen(
         onBackClick = navigateBack,
+        onSuggestAnotherClick = viewModel::suggestAnother,
         uiState = uiState
     )
 }
@@ -40,6 +41,7 @@ internal fun CocktailRoute(
 internal fun CocktailScreen(
     uiState: CocktailUIState,
     onBackClick: () -> Unit = {},
+    onSuggestAnotherClick: () -> Unit = {},
     modifier: Modifier = Modifier,
 ) {
     Box(modifier = modifier.fillMaxSize(), contentAlignment = Alignment.Center) {
@@ -64,8 +66,13 @@ internal fun CocktailScreen(
                 onClick = {},
             )
             Spacer(Modifier.size(12.dp))
-            Button(onClick = onBackClick) {
-                Text("Go Back")
+            Row(verticalAlignment = Alignment.CenterVertically, horizontalArrangement = Arrangement.spacedBy(12.dp)) {
+                OutlinedButton(onClick = onBackClick) {
+                    Text("Change Flavor")
+                }
+                OutlinedButton(onClick = onSuggestAnotherClick) {
+                    Text("Suggest Another")
+                }
             }
         }
         CreditText(modifier = Modifier.align(Alignment.BottomCenter))

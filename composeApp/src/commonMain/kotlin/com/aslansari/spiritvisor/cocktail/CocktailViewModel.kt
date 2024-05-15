@@ -16,29 +16,45 @@ import spiritvisor.composeapp.generated.resources.Res
 class CocktailViewModel : BaseViewModel<CocktailUIState>() {
 
     val cocktailService = CocktailService()
+    var cocktailsByFlavor: Map<String, List<CocktailDTO>> = emptyMap()
+    var args: CocktailArgs? = null
 
     override fun createInitialState(): CocktailUIState = CocktailUIState()
 
+    init {
+        viewModelScope.launch(Dispatchers.Default) {
+            cocktailsByFlavor = cocktailService.fetchCocktailsByFlavor().flavors
+        }
+    }
+
     fun updateArgs(args: CocktailArgs) {
-        setState { copy(loading = true) }
+        this.args = args
         setState { copy(category = args.category) }
         viewModelScope.launch(Dispatchers.Default) {
-//            val title = cocktailService.fetchCocktail(args.category)
-            val cocktailsByFlavor = cocktailService.fetchCocktailsByFlavor()
-            val cocktails = cocktailsByFlavor.flavors[args.category]
-            if (!cocktails.isNullOrEmpty()) {
-                val randomIndex = cocktails.indices.random()
-                val cocktail = cocktails[randomIndex]
-                setState {
-                    copy(
-                        title = cocktail.title,
-                        cocktailImageUrl = cocktail.image,
-                        loading = false
-                    )
-                }
-            } else {
-//                setState { copy(title = title, loading = false) }
-                setState { copy(title = "Not Found", loading = false) }
+            selectCocktailByFlavor(args.category)
+        }
+    }
+
+    fun selectCocktailByFlavor(flavor: String) {
+        val cocktails = cocktailsByFlavor[flavor]
+        if (!cocktails.isNullOrEmpty()) {
+            val randomIndex = cocktails.indices.random()
+            val cocktail = cocktails[randomIndex]
+            setState {
+                copy(
+                    title = cocktail.title,
+                    cocktailImageUrl = cocktail.image,
+                )
+            }
+        } else {
+            setState { copy(title = "Not Found", loading = false) }
+        }
+    }
+
+    fun suggestAnother() {
+        viewModelScope.launch(Dispatchers.Default) {
+            args?.let {
+                selectCocktailByFlavor(it.category)
             }
         }
     }
