@@ -11,19 +11,51 @@ import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 import kotlinx.serialization.Serializable
 import kotlinx.serialization.json.Json
+import spiritvisor.composeapp.generated.resources.Res
 
 class CocktailViewModel : BaseViewModel<CocktailUIState>() {
 
     val cocktailService = CocktailService()
+    var cocktailsByFlavor: Map<String, List<CocktailDTO>> = emptyMap()
+    var args: CocktailArgs? = null
 
     override fun createInitialState(): CocktailUIState = CocktailUIState()
 
+    init {
+        viewModelScope.launch(Dispatchers.Default) {
+            cocktailsByFlavor = cocktailService.fetchCocktailsByFlavor().flavors
+        }
+    }
+
     fun updateArgs(args: CocktailArgs) {
-        setState { copy(loading = true) }
+        this.args = args
         setState { copy(category = args.category) }
         viewModelScope.launch(Dispatchers.Default) {
-            val title = cocktailService.fetchCocktail(args.category)
-            setState { copy(title = title, loading = false) }
+            selectCocktailByFlavor(args.category)
+        }
+    }
+
+    fun selectCocktailByFlavor(flavor: String) {
+        val cocktails = cocktailsByFlavor[flavor]
+        if (!cocktails.isNullOrEmpty()) {
+            val randomIndex = cocktails.indices.random()
+            val cocktail = cocktails[randomIndex]
+            setState {
+                copy(
+                    title = cocktail.title,
+                    cocktailImageUrl = cocktail.image,
+                )
+            }
+        } else {
+            setState { copy(title = "Not Found", loading = false) }
+        }
+    }
+
+    fun suggestAnother() {
+        viewModelScope.launch(Dispatchers.Default) {
+            args?.let {
+                selectCocktailByFlavor(it.category)
+            }
         }
     }
 }
@@ -36,6 +68,11 @@ class CocktailService(
         val string = Json { ignoreUnknownKeys = true }.decodeFromString(response.bodyAsText()) as Response
         return string.title
     }
+
+    suspend fun fetchCocktailsByFlavor(): CocktailsByFlavorResponse {
+        val bytes = Res.readBytes("files/cocktails_by_flavor.json")
+        return Json { ignoreUnknownKeys = true }.decodeFromString(bytes.decodeToString())
+    }
 }
 
 @Serializable
@@ -45,9 +82,23 @@ data class Response(
     val score: Int,
 )
 
+@Serializable
+data class CocktailsByFlavorResponse(
+    val flavors: Map<String, List<CocktailDTO>>
+)
+
+@Serializable
+data class CocktailDTO(
+    val title: String,
+    val ingredients: List<String>,
+    val image: String,
+    val description: String,
+)
+
 @Stable
 data class CocktailUIState(
     val loading: Boolean = false,
     val category: String = "",
     val title: String = "",
+    val cocktailImageUrl: String = "",
 ) : UIState

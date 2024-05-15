@@ -1,18 +1,20 @@
+@file:OptIn(ExperimentalMaterialApi::class)
+
 package com.aslansari.spiritvisor.cocktail
 
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.shape.CircleShape
-import androidx.compose.material.Button
-import androidx.compose.material.CircularProgressIndicator
-import androidx.compose.material.Text
+import androidx.compose.material.*
 import androidx.compose.runtime.*
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.StrokeCap
+import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.unit.dp
 import androidx.lifecycle.viewmodel.compose.viewModel
 import coil3.compose.AsyncImage
+import com.aslansari.spiritvisor.cocktail.component.CreditText
 
 @Composable
 internal fun CocktailRoute(
@@ -30,6 +32,7 @@ internal fun CocktailRoute(
 
     CocktailScreen(
         onBackClick = navigateBack,
+        onSuggestAnotherClick = viewModel::suggestAnother,
         uiState = uiState
     )
 }
@@ -38,6 +41,7 @@ internal fun CocktailRoute(
 internal fun CocktailScreen(
     uiState: CocktailUIState,
     onBackClick: () -> Unit = {},
+    onSuggestAnotherClick: () -> Unit = {},
     modifier: Modifier = Modifier,
 ) {
     Box(modifier = modifier.fillMaxSize(), contentAlignment = Alignment.Center) {
@@ -46,27 +50,31 @@ internal fun CocktailScreen(
         ) {
             // Add content here
             AsyncImage(
-                modifier = Modifier.size(256.dp).clip(CircleShape),
-                model = "https://avatars.githubusercontent.com/u/12977501?v=4",
-                contentDescription = null
+                modifier = Modifier.size(256.dp),
+                model = uiState.cocktailImageUrl,
+                contentDescription = "Cocktail Image",
+                contentScale = ContentScale.Fit,
             )
             Spacer(Modifier.size(24.dp))
-            Row(verticalAlignment = Alignment.CenterVertically) {
-                Text("Title is")
-                if (uiState.loading) {
-                    Spacer(Modifier.size(8.dp))
-                    CircularProgressIndicator(Modifier.size(16.dp), strokeWidth = 2.dp, strokeCap = StrokeCap.Round)
-                } else {
-                    Spacer(Modifier.size(8.dp))
-                    Text(uiState.title)
+            Text(uiState.title, style = MaterialTheme.typography.h4)
+            Spacer(Modifier.size(12.dp))
+            FilterChip(
+                selected = false,
+                content = {
+                    Text(uiState.category)
+                },
+                onClick = {},
+            )
+            Spacer(Modifier.size(12.dp))
+            Row(verticalAlignment = Alignment.CenterVertically, horizontalArrangement = Arrangement.spacedBy(12.dp)) {
+                OutlinedButton(onClick = onBackClick) {
+                    Text("Change Flavor")
+                }
+                OutlinedButton(onClick = onSuggestAnotherClick) {
+                    Text("Suggest Another")
                 }
             }
-            Spacer(Modifier.size(12.dp))
-            Text("Category is ${uiState.category}")
-            Spacer(Modifier.size(12.dp))
-            Button(onClick = onBackClick) {
-                Text("Go Back")
-            }
         }
+        CreditText(modifier = Modifier.align(Alignment.BottomCenter))
     }
 }
