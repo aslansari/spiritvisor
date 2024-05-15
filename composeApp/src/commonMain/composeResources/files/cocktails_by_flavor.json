@@ -9,7 +9,7 @@
           "1 oz triple sec",
           "salt for rim"
         ],
-        "image": "",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/37/MargaritaReal.jpg/250px-MargaritaReal.jpg",
         "description": "A traditional cocktail made with fresh lime juice and tequila, rimmed with salt."
       },
       {
@@ -20,7 +20,7 @@
           "0.5 oz simple syrup",
           "dash of egg white (optional)"
         ],
-        "image": "",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/59/Whiskey_Sour.jpg/250px-Whiskey_Sour.jpg",
         "description": "A smooth blend of bourbon and lemon, perfect for a tangy yet robust flavor."
       },
       {
@@ -32,7 +32,7 @@
           "orange slice",
           "cherry"
         ],
-        "image": "",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f1/VTR_amaretto_sour.jpg/250px-VTR_amaretto_sour.jpg",
         "description": "A nutty twist on the classic sour, featuring Amaretto and a hint of lemon."
       },
       {
@@ -42,7 +42,7 @@
           "0.75 oz lemon juice",
           "0.75 oz triple sec"
         ],
-        "image": "",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/94/Sidecar-cocktail.jpg/250px-Sidecar-cocktail.jpg",
         "description": "A classic cocktail with a sharp, citrusy flavor balanced by the warmth of cognac."
       },
       {
@@ -53,7 +53,7 @@
           "1 oz lemon juice",
           "sugar rim"
         ],
-        "image": "",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/60/Lemon_Drop_cocktails.jpg/250px-Lemon_Drop_cocktails.jpg",
         "description": "A sweet and sour mix with a sugary rim, perfect for lemon lovers."
       },
       {
@@ -63,7 +63,7 @@
           "1 oz lime juice",
           "0.5 oz simple syrup"
         ],
-        "image": "",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fd/Classic_Daiquiri_in_Cocktail_Glass.jpg/250px-Classic_Daiquiri_in_Cocktail_Glass.jpg",
         "description": "A simple but elegant cocktail, focusing on the freshness of lime."
       },
       {
@@ -74,7 +74,7 @@
           "0.5 oz simple syrup",
           "club soda"
         ],
-        "image": "",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/30/VTR_-_Tom_Collins.jpg/250px-VTR_-_Tom_Collins.jpg",
         "description": "A refreshing fizzy drink with bright notes of lemon."
       }
     ],
@@ -86,7 +86,7 @@
           "1 oz coconut cream",
           "1 oz pineapple juice"
         ],
-        "image": "",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b2/Pi%C3%B1a_Colada.jpg/250px-Pi%C3%B1a_Colada.jpg",
         "description": "A sweet, tropical blend of rum, coconut cream, and pineapple juice."
       },
       {
@@ -99,7 +99,7 @@
           "0.25 oz orgeat syrup",
           "0.25 oz simple syrup"
         ],
-        "image": "",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/74/Mai_Tai_Trader_Vics_Emeryville.jpg/250px-Mai_Tai_Trader_Vics_Emeryville.jpg",
         "description": "A colorful and fruity drink with a base of rum and a hint of almond."
       },
       {
@@ -110,7 +110,7 @@
           "0.5 oz lemon juice",
           "egg white"
         ],
-        "image": "",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/82/15-09-26-RalfR-WLC-0126.jpg/250px-15-09-26-RalfR-WLC-0126.jpg",
         "description": "An old-school sweet and frothy drink, perfect for gin enthusiasts."
       },
       {
@@ -120,7 +120,7 @@
           "1 oz light cream",
           "1 oz cr\u00e8me de cacao"
         ],
-        "image": "",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b6/Alexander_Cocktail.png/250px-Alexander_Cocktail.png",
         "description": "A rich and creamy dessert cocktail with a hint of chocolate."
       },
       {
@@ -130,7 +130,7 @@
           "0.5 oz Chambord",
           "2 oz pineapple juice"
         ],
-        "image": "",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/55/French_Martini.jpg/250px-French_Martini.jpg",
         "description": "A sweet and vibrant cocktail with a luxurious raspberry flavor."
       },
       {
@@ -140,7 +140,7 @@
           "1 oz white cr\u00e8me de cacao",
           "1 oz cream"
         ],
-        "image": "",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7b/Grasshopper_cocktail.jpg/250px-Grasshopper_cocktail.jpg",
         "description": "A minty cocktail that\u2019s as green as it is sweet."
       },
       {
@@ -150,11 +150,23 @@
           "1 oz dark cr\u00e8me de cacao",
           "1 oz cream"
         ],
-        "image": "",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/ca/Brandy_alexander.jpg/250px-Brandy_alexander.jpg",
         "description": "A smooth blend of brandy and chocolate cream, a decadent classic."
       }
     ],
     "Spicy": [
+      {
+        "title": "Spicy Fifty",
+        "ingredients": [
+          "50 ml Vodka Vanilla",
+            "15 ml Elderflower Cordial",
+            "15 ml Fresh Lime Juice",
+            "10 ml Monin Honey Syrup",
+            "2 thin Slices Red Chili Pepper"
+        ],
+        "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/51/Spicy_Fifty_variation.jpg/250px-Spicy_Fifty_variation.jpg",
+        "description": "Vanilla-flavored vodka with elderflower cordial, lime juice, honey syrup, and red chili pepper."
+      },
       {
         "title": "Spicy Margarita",
         "ingredients": [
@@ -175,7 +187,7 @@
           "1 oz Campari",
           "1 oz sweet vermouth"
         ],
-        "image": "",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ea/C%C3%B3ctel_Negroni_Campari.jpg/250px-C%C3%B3ctel_Negroni_Campari.jpg",
         "description": "An Italian classic with a perfect balance of gin, Campari, and vermouth."
       }
     ],
@@ -188,7 +200,7 @@
           "0.5 oz olive brine",
           "olives for garnish"
         ],
-        "image": "",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/80/15-09-26-RalfR-WLC-0084.jpg/250px-15-09-26-RalfR-WLC-0084.jpg",
         "description": "A martini with a hint of olive brine, garnished with olives."
       }
     ],
@@ -202,7 +214,7 @@
           "soda water",
           "mint leaves"
         ],
-        "image": "",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/54/15-09-26-RalfR-WLC-0072.jpg/250px-15-09-26-RalfR-WLC-0072.jpg",
         "description": "A refreshing Cuban cocktail with mint, lime, and a splash of soda."
       }
     ],
@@ -215,7 +227,7 @@
           "2 oz orange juice",
           "2 oz cranberry juice"
         ],
-        "image": "",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a2/Sex_On_The_Beach.jpg/180px-Sex_On_The_Beach.jpg",
         "description": "A fruity cocktail perfect for summer, with a mix of vodka, peach, and citrus."
       },
       {
@@ -228,7 +240,7 @@
           "0.5 oz passion fruit syrup",
           "0.5 oz grenadine"
         ],
-        "image": "",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f4/Hurricane_at_Pat_O%27Brien%27s.JPG/250px-Hurricane_at_Pat_O%27Brien%27s.JPG",
         "description": "A sweet and potent cocktail, bursting with tropical flavors."
       },
       {
@@ -239,7 +251,7 @@
           "2 oz pineapple juice",
           "1 oz cream of coconut"
         ],
-        "image": "",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0c/Drink-Swimming-Pool.jpg/220px-Drink-Swimming-Pool.jpg",
         "description": "A visually striking cocktail with a tropical blend of pineapple and coconut."
       },
       {
@@ -250,87 +262,8 @@
           "0.5 oz cranberry juice",
           "0.5 oz lime juice"
         ],
-        "image": "",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c0/Cosmopolitan_%285076906532%29.jpg/250px-Cosmopolitan_%285076906532%29.jpg",
         "description": "A chic, fruity cocktail with a crisp cranberry flavor."
-      },
-      {
-        "title": "Strawberry Daiquiri",
-        "ingredients": [
-          "2 oz light rum",
-          "1 oz lime juice",
-          "0.5 oz simple syrup",
-          "fresh strawberries"
-        ],
-        "image": "",
-        "description": "A refreshing and fruity mix of strawberries and rum."
-      },
-      {
-        "title": "Mango Margarita",
-        "ingredients": [
-          "2 oz tequila",
-          "1 oz mango puree",
-          "0.5 oz lime juice",
-          "0.5 oz triple sec"
-        ],
-        "image": "",
-        "description": "A tropical and sweet version of the classic margarita with ripe mango."
-      },
-      {
-        "title": "Hurricane",
-        "ingredients": [
-          "1 oz light rum",
-          "1 oz dark rum",
-          "0.5 oz lime juice",
-          "1 oz orange juice",
-          "0.5 oz passion fruit syrup",
-          "0.5 oz grenadine"
-        ],
-        "image": "",
-        "description": "A sweet and potent cocktail, bursting with tropical flavors."
-      },
-      {
-        "title": "Blue Hawaiian",
-        "ingredients": [
-          "1 oz light rum",
-          "1 oz blue cura\u00e7ao",
-          "2 oz pineapple juice",
-          "1 oz cream of coconut"
-        ],
-        "image": "",
-        "description": "A visually striking cocktail with a tropical blend of pineapple and coconut."
-      },
-      {
-        "title": "Cosmopolitan",
-        "ingredients": [
-          "1.5 oz vodka",
-          "0.5 oz triple sec",
-          "0.5 oz cranberry juice",
-          "0.5 oz lime juice"
-        ],
-        "image": "",
-        "description": "A chic, fruity cocktail with a crisp cranberry flavor."
-      },
-      {
-        "title": "Strawberry Daiquiri",
-        "ingredients": [
-          "2 oz light rum",
-          "1 oz lime juice",
-          "0.5 oz simple syrup",
-          "fresh strawberries"
-        ],
-        "image": "",
-        "description": "A refreshing and fruity mix of strawberries and rum."
-      },
-      {
-        "title": "Mango Margarita",
-        "ingredients": [
-          "2 oz tequila",
-          "1 oz mango puree",
-          "0.5 oz lime juice",
-          "0.5 oz triple sec"
-        ],
-        "image": "",
-        "description": "A tropical and sweet version of the classic margarita with ripe mango."
       }
     ],
     "Smoky": [
@@ -357,7 +290,7 @@
           "tabasco (to taste)",
           "celery stalk for garnish"
         ],
-        "image": "",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1f/Bloody_Mary_Coctail_with_celery_stalk_-_Evan_Swigart.jpg/250px-Bloody_Mary_Coctail_with_celery_stalk_-_Evan_Swigart.jpg",
         "description": "A savory cocktail often enjoyed as a brunch staple, seasoned with spices and tomato juice."
       }
     ]

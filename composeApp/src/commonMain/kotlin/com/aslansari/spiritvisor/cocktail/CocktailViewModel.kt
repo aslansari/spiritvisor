@@ -26,10 +26,16 @@ class CocktailViewModel : BaseViewModel<CocktailUIState>() {
 //            val title = cocktailService.fetchCocktail(args.category)
             val cocktailsByFlavor = cocktailService.fetchCocktailsByFlavor()
             val cocktails = cocktailsByFlavor.flavors[args.category]
-            if (cocktails != null) {
+            if (!cocktails.isNullOrEmpty()) {
                 val randomIndex = cocktails.indices.random()
                 val cocktail = cocktails[randomIndex]
-                setState { copy(title = cocktail.title, loading = false) }
+                setState {
+                    copy(
+                        title = cocktail.title,
+                        cocktailImageUrl = cocktail.image,
+                        loading = false
+                    )
+                }
             } else {
 //                setState { copy(title = title, loading = false) }
                 setState { copy(title = "Not Found", loading = false) }
@@ -78,4 +84,5 @@ data class CocktailUIState(
     val loading: Boolean = false,
     val category: String = "",
     val title: String = "",
+    val cocktailImageUrl: String = "",
 ) : UIState

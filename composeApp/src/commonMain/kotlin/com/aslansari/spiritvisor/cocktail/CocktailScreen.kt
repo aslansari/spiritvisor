@@ -1,3 +1,5 @@
+@file:OptIn(ExperimentalMaterialApi::class)
+
 package com.aslansari.spiritvisor.cocktail
 
 import androidx.compose.foundation.layout.*
@@ -8,6 +10,7 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.StrokeCap
+import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.unit.dp
 import androidx.lifecycle.viewmodel.compose.viewModel
 import coil3.compose.AsyncImage
@@ -45,23 +48,21 @@ internal fun CocktailScreen(
         ) {
             // Add content here
             AsyncImage(
-                modifier = Modifier.size(256.dp).clip(CircleShape),
-                model = "https://avatars.githubusercontent.com/u/12977501?v=4",
-                contentDescription = null
+                modifier = Modifier.size(256.dp),
+                model = uiState.cocktailImageUrl,
+                contentDescription = "Cocktail Image",
+                contentScale = ContentScale.Fit,
             )
             Spacer(Modifier.size(24.dp))
-            Row(verticalAlignment = Alignment.CenterVertically) {
-                Text("Title is")
-                if (uiState.loading) {
-                    Spacer(Modifier.size(8.dp))
-                    CircularProgressIndicator(Modifier.size(16.dp), strokeWidth = 2.dp, strokeCap = StrokeCap.Round)
-                } else {
-                    Spacer(Modifier.size(8.dp))
-                    Text(uiState.title)
-                }
-            }
+            Text(uiState.title, style = MaterialTheme.typography.h4)
             Spacer(Modifier.size(12.dp))
-            Text("Category is ${uiState.category}")
+            FilterChip(
+                selected = false,
+                content = {
+                    Text(uiState.category)
+                },
+                onClick = {},
+            )
             Spacer(Modifier.size(12.dp))
             Button(onClick = onBackClick) {
                 Text("Go Back")
