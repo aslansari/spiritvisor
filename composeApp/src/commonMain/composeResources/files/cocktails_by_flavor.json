@@ -1,0 +1,365 @@
+{
+  "flavors": {
+    "Sour": [
+      {
+        "title": "Classic Margarita",
+        "ingredients": [
+          "2 oz tequila",
+          "1 oz lime juice",
+          "1 oz triple sec",
+          "salt for rim"
+        ],
+        "image": "",
+        "description": "A traditional cocktail made with fresh lime juice and tequila, rimmed with salt."
+      },
+      {
+        "title": "Whiskey Sour",
+        "ingredients": [
+          "2 oz whiskey",
+          "0.75 oz lemon juice",
+          "0.5 oz simple syrup",
+          "dash of egg white (optional)"
+        ],
+        "image": "",
+        "description": "A smooth blend of bourbon and lemon, perfect for a tangy yet robust flavor."
+      },
+      {
+        "title": "Amaretto Sour",
+        "ingredients": [
+          "1.5 oz Amaretto",
+          "0.75 oz lemon juice",
+          "0.25 oz simple syrup",
+          "orange slice",
+          "cherry"
+        ],
+        "image": "",
+        "description": "A nutty twist on the classic sour, featuring Amaretto and a hint of lemon."
+      },
+      {
+        "title": "Sidecar",
+        "ingredients": [
+          "1.5 oz cognac",
+          "0.75 oz lemon juice",
+          "0.75 oz triple sec"
+        ],
+        "image": "",
+        "description": "A classic cocktail with a sharp, citrusy flavor balanced by the warmth of cognac."
+      },
+      {
+        "title": "Lemon Drop Martini",
+        "ingredients": [
+          "2 oz vodka",
+          "0.5 oz triple sec",
+          "1 oz lemon juice",
+          "sugar rim"
+        ],
+        "image": "",
+        "description": "A sweet and sour mix with a sugary rim, perfect for lemon lovers."
+      },
+      {
+        "title": "Daiquiri",
+        "ingredients": [
+          "2 oz rum",
+          "1 oz lime juice",
+          "0.5 oz simple syrup"
+        ],
+        "image": "",
+        "description": "A simple but elegant cocktail, focusing on the freshness of lime."
+      },
+      {
+        "title": "Tom Collins",
+        "ingredients": [
+          "2 oz gin",
+          "1 oz lemon juice",
+          "0.5 oz simple syrup",
+          "club soda"
+        ],
+        "image": "",
+        "description": "A refreshing fizzy drink with bright notes of lemon."
+      }
+    ],
+    "Sweet": [
+      {
+        "title": "Pina Colada",
+        "ingredients": [
+          "2 oz rum",
+          "1 oz coconut cream",
+          "1 oz pineapple juice"
+        ],
+        "image": "",
+        "description": "A sweet, tropical blend of rum, coconut cream, and pineapple juice."
+      },
+      {
+        "title": "Mai Tai",
+        "ingredients": [
+          "1.5 oz white rum",
+          "0.5 oz dark rum",
+          "0.75 oz lime juice",
+          "0.5 oz orange cura\u00e7ao",
+          "0.25 oz orgeat syrup",
+          "0.25 oz simple syrup"
+        ],
+        "image": "",
+        "description": "A colorful and fruity drink with a base of rum and a hint of almond."
+      },
+      {
+        "title": "Clover Club",
+        "ingredients": [
+          "1.5 oz gin",
+          "0.5 oz raspberry syrup",
+          "0.5 oz lemon juice",
+          "egg white"
+        ],
+        "image": "",
+        "description": "An old-school sweet and frothy drink, perfect for gin enthusiasts."
+      },
+      {
+        "title": "Alexander",
+        "ingredients": [
+          "1 oz gin",
+          "1 oz light cream",
+          "1 oz cr\u00e8me de cacao"
+        ],
+        "image": "",
+        "description": "A rich and creamy dessert cocktail with a hint of chocolate."
+      },
+      {
+        "title": "French Martini",
+        "ingredients": [
+          "1.5 oz vodka",
+          "0.5 oz Chambord",
+          "2 oz pineapple juice"
+        ],
+        "image": "",
+        "description": "A sweet and vibrant cocktail with a luxurious raspberry flavor."
+      },
+      {
+        "title": "Grasshopper",
+        "ingredients": [
+          "1 oz green cr\u00e8me de menthe",
+          "1 oz white cr\u00e8me de cacao",
+          "1 oz cream"
+        ],
+        "image": "",
+        "description": "A minty cocktail that\u2019s as green as it is sweet."
+      },
+      {
+        "title": "Brandy Alexander",
+        "ingredients": [
+          "1 oz brandy",
+          "1 oz dark cr\u00e8me de cacao",
+          "1 oz cream"
+        ],
+        "image": "",
+        "description": "A smooth blend of brandy and chocolate cream, a decadent classic."
+      }
+    ],
+    "Spicy": [
+      {
+        "title": "Spicy Margarita",
+        "ingredients": [
+          "2 oz tequila",
+          "1 oz lime juice",
+          "0.5 oz simple syrup",
+          "2 slices jalape\u00f1o"
+        ],
+        "image": "",
+        "description": "A fiery twist on the classic margarita, with a kick of jalape\u00f1o."
+      }
+    ],
+    "Bitter": [
+      {
+        "title": "Negroni",
+        "ingredients": [
+          "1 oz gin",
+          "1 oz Campari",
+          "1 oz sweet vermouth"
+        ],
+        "image": "",
+        "description": "An Italian classic with a perfect balance of gin, Campari, and vermouth."
+      }
+    ],
+    "Salty": [
+      {
+        "title": "Dirty Martini",
+        "ingredients": [
+          "2 oz gin",
+          "1 oz dry vermouth",
+          "0.5 oz olive brine",
+          "olives for garnish"
+        ],
+        "image": "",
+        "description": "A martini with a hint of olive brine, garnished with olives."
+      }
+    ],
+    "Herbal": [
+      {
+        "title": "Mojito",
+        "ingredients": [
+          "1.5 oz white rum",
+          "sugar",
+          "lime juice",
+          "soda water",
+          "mint leaves"
+        ],
+        "image": "",
+        "description": "A refreshing Cuban cocktail with mint, lime, and a splash of soda."
+      }
+    ],
+    "Fruity": [
+      {
+        "title": "Sex on the Beach",
+        "ingredients": [
+          "1.5 oz vodka",
+          "0.5 oz peach schnapps",
+          "2 oz orange juice",
+          "2 oz cranberry juice"
+        ],
+        "image": "",
+        "description": "A fruity cocktail perfect for summer, with a mix of vodka, peach, and citrus."
+      },
+      {
+        "title": "Hurricane",
+        "ingredients": [
+          "1 oz light rum",
+          "1 oz dark rum",
+          "0.5 oz lime juice",
+          "1 oz orange juice",
+          "0.5 oz passion fruit syrup",
+          "0.5 oz grenadine"
+        ],
+        "image": "",
+        "description": "A sweet and potent cocktail, bursting with tropical flavors."
+      },
+      {
+        "title": "Blue Hawaiian",
+        "ingredients": [
+          "1 oz light rum",
+          "1 oz blue cura\u00e7ao",
+          "2 oz pineapple juice",
+          "1 oz cream of coconut"
+        ],
+        "image": "",
+        "description": "A visually striking cocktail with a tropical blend of pineapple and coconut."
+      },
+      {
+        "title": "Cosmopolitan",
+        "ingredients": [
+          "1.5 oz vodka",
+          "0.5 oz triple sec",
+          "0.5 oz cranberry juice",
+          "0.5 oz lime juice"
+        ],
+        "image": "",
+        "description": "A chic, fruity cocktail with a crisp cranberry flavor."
+      },
+      {
+        "title": "Strawberry Daiquiri",
+        "ingredients": [
+          "2 oz light rum",
+          "1 oz lime juice",
+          "0.5 oz simple syrup",
+          "fresh strawberries"
+        ],
+        "image": "",
+        "description": "A refreshing and fruity mix of strawberries and rum."
+      },
+      {
+        "title": "Mango Margarita",
+        "ingredients": [
+          "2 oz tequila",
+          "1 oz mango puree",
+          "0.5 oz lime juice",
+          "0.5 oz triple sec"
+        ],
+        "image": "",
+        "description": "A tropical and sweet version of the classic margarita with ripe mango."
+      },
+      {
+        "title": "Hurricane",
+        "ingredients": [
+          "1 oz light rum",
+          "1 oz dark rum",
+          "0.5 oz lime juice",
+          "1 oz orange juice",
+          "0.5 oz passion fruit syrup",
+          "0.5 oz grenadine"
+        ],
+        "image": "",
+        "description": "A sweet and potent cocktail, bursting with tropical flavors."
+      },
+      {
+        "title": "Blue Hawaiian",
+        "ingredients": [
+          "1 oz light rum",
+          "1 oz blue cura\u00e7ao",
+          "2 oz pineapple juice",
+          "1 oz cream of coconut"
+        ],
+        "image": "",
+        "description": "A visually striking cocktail with a tropical blend of pineapple and coconut."
+      },
+      {
+        "title": "Cosmopolitan",
+        "ingredients": [
+          "1.5 oz vodka",
+          "0.5 oz triple sec",
+          "0.5 oz cranberry juice",
+          "0.5 oz lime juice"
+        ],
+        "image": "",
+        "description": "A chic, fruity cocktail with a crisp cranberry flavor."
+      },
+      {
+        "title": "Strawberry Daiquiri",
+        "ingredients": [
+          "2 oz light rum",
+          "1 oz lime juice",
+          "0.5 oz simple syrup",
+          "fresh strawberries"
+        ],
+        "image": "",
+        "description": "A refreshing and fruity mix of strawberries and rum."
+      },
+      {
+        "title": "Mango Margarita",
+        "ingredients": [
+          "2 oz tequila",
+          "1 oz mango puree",
+          "0.5 oz lime juice",
+          "0.5 oz triple sec"
+        ],
+        "image": "",
+        "description": "A tropical and sweet version of the classic margarita with ripe mango."
+      }
+    ],
+    "Smoky": [
+      {
+        "title": "Smoky Martini",
+        "ingredients": [
+          "2 oz gin",
+          "0.5 oz dry vermouth",
+          "0.25 oz scotch"
+        ],
+        "image": "",
+        "description": "A martini with a smoky twist, incorporating a hint of scotch."
+      }
+    ],
+    "Umami": [
+      {
+        "title": "Bloody Mary",
+        "ingredients": [
+          "1.5 oz vodka",
+          "3 oz tomato juice",
+          "0.5 oz lemon juice",
+          "2 dashes of Worcestershire sauce",
+          "pinch of salt and pepper",
+          "tabasco (to taste)",
+          "celery stalk for garnish"
+        ],
+        "image": "",
+        "description": "A savory cocktail often enjoyed as a brunch staple, seasoned with spices and tomato juice."
+      }
+    ]
+  }
+}
