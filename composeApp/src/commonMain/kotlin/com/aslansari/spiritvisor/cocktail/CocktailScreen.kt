@@ -2,9 +2,7 @@ package com.aslansari.spiritvisor.cocktail
 
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.shape.CircleShape
-import androidx.compose.material.Button
-import androidx.compose.material.CircularProgressIndicator
-import androidx.compose.material.Text
+import androidx.compose.material.*
 import androidx.compose.runtime.*
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
@@ -13,6 +11,7 @@ import androidx.compose.ui.graphics.StrokeCap
 import androidx.compose.ui.unit.dp
 import androidx.lifecycle.viewmodel.compose.viewModel
 import coil3.compose.AsyncImage
+import com.aslansari.spiritvisor.cocktail.component.CreditText
 
 @Composable
 internal fun CocktailRoute(
@@ -68,5 +67,6 @@ internal fun CocktailScreen(
                 Text("Go Back")
             }
         }
+        CreditText(modifier = Modifier.align(Alignment.BottomCenter))
     }
 }

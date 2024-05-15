@@ -11,6 +11,7 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
 import androidx.lifecycle.viewmodel.compose.viewModel
+import com.aslansari.spiritvisor.cocktail.component.CreditText
 
 @Composable
 internal fun HomeRoute(
@@ -34,29 +35,32 @@ internal fun HomeScreen(
     uiState: HomeUiState,
     modifier: Modifier = Modifier,
 ) {
-    Column(
-        modifier = modifier.fillMaxSize(),
-        horizontalAlignment = Alignment.CenterHorizontally,
-        verticalArrangement = Arrangement.Center,
-    ) {
-        Text("Pick a flavor for your cocktail ...", style = MaterialTheme.typography.h4)
-        Spacer(Modifier.size(32.dp))
-        FlowRow(
-            modifier = Modifier.fillMaxWidth(.5f),
-            horizontalArrangement = Arrangement.spacedBy(32.dp),
-            verticalArrangement = Arrangement.spacedBy(16.dp),
-            maxItemsInEachRow = 3,
+    Box(modifier = modifier.fillMaxSize()) {
+        Column(
+            modifier = Modifier.fillMaxSize(),
+            horizontalAlignment = Alignment.CenterHorizontally,
+            verticalArrangement = Arrangement.Center,
         ) {
-            FlavorCategoryButton("Sour", onClick = { onClick("Sour") })
-            FlavorCategoryButton("Sweet", onClick = { onClick("Sweet") })
-            FlavorCategoryButton("Salty", onClick = { onClick("Salty") })
-            FlavorCategoryButton("Spicy", onClick = { onClick("Spicy") })
-            FlavorCategoryButton("Bitter", onClick = { onClick("Bitter") })
-            FlavorCategoryButton("Herbal", onClick = { onClick("Herbal") })
-            FlavorCategoryButton("Fruity", onClick = { onClick("Fruity") })
-            FlavorCategoryButton("Smoky", onClick = { onClick("Smoky") })
-            FlavorCategoryButton("Umami", onClick = { onClick("Umami") })
+            Text("Pick a flavor for your cocktail ...", style = MaterialTheme.typography.h4)
+            Spacer(Modifier.size(32.dp))
+            FlowRow(
+                modifier = Modifier.fillMaxWidth(.5f),
+                horizontalArrangement = Arrangement.spacedBy(32.dp),
+                verticalArrangement = Arrangement.spacedBy(16.dp),
+                maxItemsInEachRow = 3,
+            ) {
+                FlavorCategoryButton("Sour", onClick = { onClick("Sour") })
+                FlavorCategoryButton("Sweet", onClick = { onClick("Sweet") })
+                FlavorCategoryButton("Salty", onClick = { onClick("Salty") })
+                FlavorCategoryButton("Spicy", onClick = { onClick("Spicy") })
+                FlavorCategoryButton("Bitter", onClick = { onClick("Bitter") })
+                FlavorCategoryButton("Herbal", onClick = { onClick("Herbal") })
+                FlavorCategoryButton("Fruity", onClick = { onClick("Fruity") })
+                FlavorCategoryButton("Smoky", onClick = { onClick("Smoky") })
+                FlavorCategoryButton("Umami", onClick = { onClick("Umami") })
+            }
         }
+        CreditText(modifier = Modifier.align(Alignment.BottomCenter))
     }
 }
 
