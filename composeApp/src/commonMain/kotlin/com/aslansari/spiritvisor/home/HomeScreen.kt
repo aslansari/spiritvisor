@@ -1,3 +1,5 @@
+@file:OptIn(ExperimentalMaterial3WindowSizeClassApi::class)
+
 package com.aslansari.spiritvisor.home
 
 import androidx.compose.foundation.layout.*
@@ -5,6 +7,9 @@ import androidx.compose.material.Button
 import androidx.compose.material.CircularProgressIndicator
 import androidx.compose.material.MaterialTheme
 import androidx.compose.material.Text
+import androidx.compose.material3.windowsizeclass.ExperimentalMaterial3WindowSizeClassApi
+import androidx.compose.material3.windowsizeclass.WindowWidthSizeClass
+import androidx.compose.material3.windowsizeclass.calculateWindowSizeClass
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.getValue
@@ -44,6 +49,7 @@ internal fun HomeScreen(
             }
         }
     }
+    val windowSizeClass = calculateWindowSizeClass()
     Box(modifier = modifier.fillMaxSize()) {
         Column(
             modifier = Modifier.fillMaxSize(),
@@ -53,7 +59,13 @@ internal fun HomeScreen(
             Text("Pick a flavor for your cocktail ...", style = MaterialTheme.typography.h4)
             Spacer(Modifier.size(32.dp))
             FlowRow(
-                modifier = Modifier.fillMaxWidth(.5f),
+                modifier = Modifier.padding(16.dp).then(
+                    if (windowSizeClass.widthSizeClass == WindowWidthSizeClass.Expanded) {
+                        Modifier.fillMaxWidth(.5f)
+                    } else {
+                        Modifier.fillMaxWidth()
+                    }
+                ),
                 horizontalArrangement = Arrangement.spacedBy(32.dp),
                 verticalArrangement = Arrangement.spacedBy(16.dp),
                 maxItemsInEachRow = 3,
@@ -74,6 +86,6 @@ private fun RowScope.FlavorCategoryButton(
     modifier: Modifier = Modifier,
 ) {
     Button(modifier = modifier.weight(1f), onClick = onClick) {
-        Text(text)
+        Text(text, style = MaterialTheme.typography.h6)
     }
 }

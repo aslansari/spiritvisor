@@ -31,7 +31,7 @@ fun CreditText(modifier: Modifier = Modifier) {
             }
             append(" with")
         }
-        Text(creditText, style = MaterialTheme.typography.caption.copy(color = Color(0xFF697077)))
+        Text(creditText, style = MaterialTheme.typography.body2.copy(color = Color(0xFF697077)))
         Spacer(Modifier.size(2.dp))
         Icon(
             imageVector = Icons.HeartSharp,
