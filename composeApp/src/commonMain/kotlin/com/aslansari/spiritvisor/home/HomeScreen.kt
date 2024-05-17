@@ -15,6 +15,7 @@ import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.getValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.window.Dialog
 import androidx.lifecycle.viewmodel.compose.viewModel
@@ -86,10 +87,15 @@ private fun RowScope.FlavorCategoryButton(
     modifier: Modifier = Modifier,
 ) {
     Button(
-        modifier = modifier.weight(1f),
+        modifier = modifier.height(60.dp).weight(1f),
         shape = MaterialTheme.shapes.medium,
         onClick = onClick,
     ) {
-        Text(text, style = MaterialTheme.typography.h6)
+        Text(
+            text = text,
+            style = MaterialTheme.typography.h6,
+            maxLines = 1,
+            overflow = TextOverflow.Ellipsis,
+        )
     }
 }
