@@ -1,4 +1,4 @@
-@file:OptIn(ExperimentalMaterialApi::class)
+@file:OptIn(ExperimentalMaterialApi::class, ExperimentalLayoutApi::class)
 
 package com.aslansari.spiritvisor.cocktail
 
@@ -6,12 +6,15 @@ import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.material.*
 import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.automirrored.filled.ArrowBack
+import androidx.compose.material.icons.filled.Refresh
 import androidx.compose.runtime.*
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.StrokeCap
 import androidx.compose.ui.layout.ContentScale
+import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.lifecycle.viewmodel.compose.viewModel
 import coil3.compose.SubcomposeAsyncImage
@@ -85,22 +88,71 @@ internal fun CocktailScreen(
                 }
             )
             Spacer(Modifier.size(24.dp))
-            Text(uiState.title, style = MaterialTheme.typography.h4)
+            Text(uiState.title, style = MaterialTheme.typography.h4.copy(fontWeight = FontWeight.SemiBold))
             Spacer(Modifier.size(12.dp))
-            FilterChip(
-                selected = false,
-                content = {
-                    Text(uiState.category)
-                },
-                onClick = {},
-            )
+            Text(uiState.description, style = MaterialTheme.typography.body2)
             Spacer(Modifier.size(12.dp))
+            FlowRow(
+                modifier = Modifier,
+                horizontalArrangement = Arrangement.Center,
+                maxItemsInEachRow = 4,
+            ) {
+                FilterChip(
+                    colors = ChipDefaults.filterChipColors(
+                        backgroundColor = Color(0xFFF2F4F8), // Gray 10
+                        contentColor = Color(0xFF21272A), // Gray 90
+                    ),
+                    selected = false,
+                    content = {
+                        Text(
+                            uiState.category,
+                            style = MaterialTheme.typography.subtitle1.copy(fontWeight = FontWeight.Medium)
+                        )
+                    },
+                    onClick = {},
+                    modifier = Modifier.padding(end = 8.dp)
+                )
+                uiState.ingredients.forEachIndexed { index, ingredient ->
+                    Row {
+                        FilterChip(
+                            colors = ChipDefaults.filterChipColors(
+                                backgroundColor = Color(0xFFF2F4F8), // Gray 10
+                                contentColor = Color(0xFF21272A), // Gray 90
+                            ),
+                            selected = false,
+                            content = {
+                                Text(
+                                    ingredient,
+                                    style = MaterialTheme.typography.subtitle1.copy(fontWeight = FontWeight.Medium)
+                                )
+                            },
+                            onClick = {},
+                        )
+                        if (index < uiState.ingredients.lastIndex) {
+                            Spacer(Modifier.size(8.dp))
+                        }
+                    }
+                }
+            }
+            Spacer(Modifier.size(24.dp))
             Row(verticalAlignment = Alignment.CenterVertically, horizontalArrangement = Arrangement.spacedBy(12.dp)) {
-                OutlinedButton(onClick = onBackClick) {
+                OutlinedButton(
+                    onClick = onBackClick,
+                    shape = MaterialTheme.shapes.medium,
+                ) {
+                    Icon(imageVector = Icons.AutoMirrored.Filled.ArrowBack, contentDescription = "Back")
+                    Spacer(Modifier.size(2.dp))
                     Text("Change Flavor")
                 }
-                OutlinedButton(onClick = onSuggestAnotherClick) {
-                    Text("Suggest Another")
+                if (uiState.showSuggestAnother) {
+                    OutlinedButton(
+                        onClick = onSuggestAnotherClick,
+                        shape = MaterialTheme.shapes.medium,
+                    ) {
+                        Icon(imageVector = Icons.Default.Refresh, contentDescription = "Refresh")
+                        Spacer(Modifier.size(2.dp))
+                        Text("Suggest Another")
+                    }
                 }
             }
         }

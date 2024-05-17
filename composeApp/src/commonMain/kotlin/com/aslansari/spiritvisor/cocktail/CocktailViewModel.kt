@@ -29,25 +29,37 @@ class CocktailViewModel : BaseViewModel<CocktailUIState>() {
 
     fun updateArgs(args: CocktailArgs) {
         this.args = args
-        setState { copy(category = args.category) }
+        setState { copy(category = args.category, selectedIndex = -1) }
         viewModelScope.launch(Dispatchers.Default) {
             selectCocktailByFlavor(args.category)
         }
     }
 
-    fun selectCocktailByFlavor(flavor: String) {
+    private fun selectCocktailByFlavor(flavor: String) {
         val cocktails = cocktailsByFlavor[flavor]
         if (!cocktails.isNullOrEmpty()) {
-            val cocktail = cocktails.random()
+
+            setState { copy(showSuggestAnother = cocktails.size > 1) }
+
+            val randomIndex = randomExcept(currentState.selectedIndex, cocktails.lastIndex)
+            setState { copy(selectedIndex = randomIndex) }
+            val cocktail = cocktails[randomIndex]
             setState {
                 copy(
                     title = cocktail.title,
                     cocktailImageUrl = cocktail.image,
+                    ingredients = cocktail.ingredients,
+                    description = cocktail.description,
                 )
             }
         } else {
             setState { copy(title = "Not Found", loading = false) }
         }
+    }
+
+    private fun randomExcept(except: Int, size: Int): Int {
+        val random = (0 .. size).filter { it != except }.random()
+        return random
     }
 
     fun suggestAnother() {
@@ -100,4 +112,8 @@ data class CocktailUIState(
     val category: String = "",
     val title: String = "",
     val cocktailImageUrl: String = "",
+    val selectedIndex: Int = -1,
+    val showSuggestAnother: Boolean = false,
+    val ingredients: List<String> = emptyList(),
+    val description: String = "",
 ) : UIState

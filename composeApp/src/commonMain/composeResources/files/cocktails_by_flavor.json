@@ -4,9 +4,9 @@
       {
         "title": "Classic Margarita",
         "ingredients": [
-          "2 oz tequila",
-          "1 oz lime juice",
-          "1 oz triple sec",
+          "Tequila",
+          "Lime Juice",
+          "Triple Sec",
           "salt for rim"
         ],
         "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/37/MargaritaReal.jpg/250px-MargaritaReal.jpg",
@@ -15,9 +15,9 @@
       {
         "title": "Whiskey Sour",
         "ingredients": [
-          "2 oz whiskey",
-          "0.75 oz lemon juice",
-          "0.5 oz simple syrup",
+          "Whiskey",
+          "Lemon Juice",
+          "Simple Syrup",
           "dash of egg white (optional)"
         ],
         "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/59/Whiskey_Sour.jpg/250px-Whiskey_Sour.jpg",
@@ -26,11 +26,11 @@
       {
         "title": "Amaretto Sour",
         "ingredients": [
-          "1.5 oz Amaretto",
-          "0.75 oz lemon juice",
-          "0.25 oz simple syrup",
-          "orange slice",
-          "cherry"
+          "Amaretto",
+          "Lemon Juice",
+          "Simple Syrup",
+          "Orange Slice",
+          "Cherry"
         ],
         "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f1/VTR_amaretto_sour.jpg/250px-VTR_amaretto_sour.jpg",
         "description": "A nutty twist on the classic sour, featuring Amaretto and a hint of lemon."
@@ -38,9 +38,9 @@
       {
         "title": "Sidecar",
         "ingredients": [
-          "1.5 oz cognac",
-          "0.75 oz lemon juice",
-          "0.75 oz triple sec"
+          "Cognac",
+          "Lemon Juice",
+          "Triple Sec"
         ],
         "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/94/Sidecar-cocktail.jpg/250px-Sidecar-cocktail.jpg",
         "description": "A classic cocktail with a sharp, citrusy flavor balanced by the warmth of cognac."
@@ -48,10 +48,10 @@
       {
         "title": "Lemon Drop Martini",
         "ingredients": [
-          "2 oz vodka",
-          "0.5 oz triple sec",
-          "1 oz lemon juice",
-          "sugar rim"
+          "Vodka",
+          "Triple Sec",
+          "Lemon Juice",
+          "Sugar Rim"
         ],
         "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/60/Lemon_Drop_cocktails.jpg/250px-Lemon_Drop_cocktails.jpg",
         "description": "A sweet and sour mix with a sugary rim, perfect for lemon lovers."
@@ -59,9 +59,9 @@
       {
         "title": "Daiquiri",
         "ingredients": [
-          "2 oz rum",
-          "1 oz lime juice",
-          "0.5 oz simple syrup"
+          "Rum",
+          "Lime Juice",
+          "Simple Syrup"
         ],
         "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fd/Classic_Daiquiri_in_Cocktail_Glass.jpg/250px-Classic_Daiquiri_in_Cocktail_Glass.jpg",
         "description": "A simple but elegant cocktail, focusing on the freshness of lime."
@@ -69,10 +69,10 @@
       {
         "title": "Tom Collins",
         "ingredients": [
-          "2 oz gin",
-          "1 oz lemon juice",
-          "0.5 oz simple syrup",
-          "club soda"
+          "Gin",
+          "Lemon Juice",
+          "Simple Syrup",
+          "Club Soda"
         ],
         "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/30/VTR_-_Tom_Collins.jpg/250px-VTR_-_Tom_Collins.jpg",
         "description": "A refreshing fizzy drink with bright notes of lemon."
@@ -82,9 +82,9 @@
       {
         "title": "Pina Colada",
         "ingredients": [
-          "2 oz rum",
-          "1 oz coconut cream",
-          "1 oz pineapple juice"
+          "Rum",
+          "Coconut Cream",
+          "Pineapple Juice"
         ],
         "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b2/Pi%C3%B1a_Colada.jpg/250px-Pi%C3%B1a_Colada.jpg",
         "description": "A sweet, tropical blend of rum, coconut cream, and pineapple juice."
@@ -92,12 +92,12 @@
       {
         "title": "Mai Tai",
         "ingredients": [
-          "1.5 oz white rum",
-          "0.5 oz dark rum",
-          "0.75 oz lime juice",
-          "0.5 oz orange cura\u00e7ao",
-          "0.25 oz orgeat syrup",
-          "0.25 oz simple syrup"
+          "White Rum",
+          "Dark Rum",
+          "Lime Juice",
+          "Orange Cura\u00e7ao",
+          "Orgeat Syrup",
+          "Simple Syrup"
         ],
         "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/74/Mai_Tai_Trader_Vics_Emeryville.jpg/250px-Mai_Tai_Trader_Vics_Emeryville.jpg",
         "description": "A colorful and fruity drink with a base of rum and a hint of almond."
@@ -105,10 +105,10 @@
       {
         "title": "Clover Club",
         "ingredients": [
-          "1.5 oz gin",
-          "0.5 oz raspberry syrup",
-          "0.5 oz lemon juice",
-          "egg white"
+          "Gin",
+          "Raspberry Syrup",
+          "Lemon Juice",
+          "Egg White"
         ],
         "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/82/15-09-26-RalfR-WLC-0126.jpg/250px-15-09-26-RalfR-WLC-0126.jpg",
         "description": "An old-school sweet and frothy drink, perfect for gin enthusiasts."
@@ -116,9 +116,9 @@
       {
         "title": "Alexander",
         "ingredients": [
-          "1 oz gin",
-          "1 oz light cream",
-          "1 oz cr\u00e8me de cacao"
+          "Gin",
+          "Light Cream",
+          "Cr\u00e8me de cacao"
         ],
         "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b6/Alexander_Cocktail.png/250px-Alexander_Cocktail.png",
         "description": "A rich and creamy dessert cocktail with a hint of chocolate."
@@ -126,9 +126,9 @@
       {
         "title": "French Martini",
         "ingredients": [
-          "1.5 oz vodka",
-          "0.5 oz Chambord",
-          "2 oz pineapple juice"
+          "Vodka",
+          "Chambord",
+          "Pineapple Juice"
         ],
         "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/55/French_Martini.jpg/250px-French_Martini.jpg",
         "description": "A sweet and vibrant cocktail with a luxurious raspberry flavor."
@@ -136,9 +136,9 @@
       {
         "title": "Grasshopper",
         "ingredients": [
-          "1 oz green cr\u00e8me de menthe",
-          "1 oz white cr\u00e8me de cacao",
-          "1 oz cream"
+          "Green cr\u00e8me de menthe",
+          "White cr\u00e8me de cacao",
+          "Cream"
         ],
         "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7b/Grasshopper_cocktail.jpg/250px-Grasshopper_cocktail.jpg",
         "description": "A minty cocktail that\u2019s as green as it is sweet."
@@ -146,9 +146,9 @@
       {
         "title": "Brandy Alexander",
         "ingredients": [
-          "1 oz brandy",
-          "1 oz dark cr\u00e8me de cacao",
-          "1 oz cream"
+          "Brandy",
+          "Dark cr\u00e8me de cacao",
+          "Cream"
         ],
         "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/ca/Brandy_alexander.jpg/250px-Brandy_alexander.jpg",
         "description": "A smooth blend of brandy and chocolate cream, a decadent classic."
@@ -158,11 +158,11 @@
       {
         "title": "Spicy Fifty",
         "ingredients": [
-          "50 ml Vodka Vanilla",
-            "15 ml Elderflower Cordial",
-            "15 ml Fresh Lime Juice",
-            "10 ml Monin Honey Syrup",
-            "2 thin Slices Red Chili Pepper"
+          "Vodka",
+          "Elderflower",
+          "Lime Juice",
+          "Honey Syrup",
+          "Red Chili Pepper"
         ],
         "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/51/Spicy_Fifty_variation.jpg/250px-Spicy_Fifty_variation.jpg",
         "description": "Vanilla-flavored vodka with elderflower cordial, lime juice, honey syrup, and red chili pepper."
@@ -170,10 +170,10 @@
       {
         "title": "Spicy Margarita",
         "ingredients": [
-          "2 oz tequila",
-          "1 oz lime juice",
-          "0.5 oz simple syrup",
-          "2 slices jalape\u00f1o"
+          "Tequila",
+          "Lime Juice",
+          "Simple Syrup",
+          "Jalape\u00f1o"
         ],
         "image": "",
         "description": "A fiery twist on the classic margarita, with a kick of jalape\u00f1o."
@@ -183,9 +183,9 @@
       {
         "title": "Negroni",
         "ingredients": [
-          "1 oz gin",
-          "1 oz Campari",
-          "1 oz sweet vermouth"
+          "Gin",
+          "Campari",
+          "Sweet Vermouth"
         ],
         "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ea/C%C3%B3ctel_Negroni_Campari.jpg/250px-C%C3%B3ctel_Negroni_Campari.jpg",
         "description": "An Italian classic with a perfect balance of gin, Campari, and vermouth."
@@ -195,9 +195,9 @@
       {
         "title": "Dirty Martini",
         "ingredients": [
-          "2 oz gin",
-          "1 oz dry vermouth",
-          "0.5 oz olive brine",
+          "Gin",
+          "Dry Vermouth",
+          "Olive Brine",
           "olives for garnish"
         ],
         "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/80/15-09-26-RalfR-WLC-0084.jpg/250px-15-09-26-RalfR-WLC-0084.jpg",
@@ -208,11 +208,11 @@
       {
         "title": "Mojito",
         "ingredients": [
-          "1.5 oz white rum",
-          "sugar",
-          "lime juice",
-          "soda water",
-          "mint leaves"
+          "White rum",
+          "Sugar",
+          "Lime Juice",
+          "Soda Water",
+          "Mint Leaves"
         ],
         "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/54/15-09-26-RalfR-WLC-0072.jpg/250px-15-09-26-RalfR-WLC-0072.jpg",
         "description": "A refreshing Cuban cocktail with mint, lime, and a splash of soda."
@@ -222,10 +222,10 @@
       {
         "title": "Sex on the Beach",
         "ingredients": [
-          "1.5 oz vodka",
-          "0.5 oz peach schnapps",
-          "2 oz orange juice",
-          "2 oz cranberry juice"
+          "Vodka",
+          "Peach Schnapps",
+          "Orange Juice",
+          "Cranberry Juice"
         ],
         "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a2/Sex_On_The_Beach.jpg/180px-Sex_On_The_Beach.jpg",
         "description": "A fruity cocktail perfect for summer, with a mix of vodka, peach, and citrus."
@@ -233,12 +233,12 @@
       {
         "title": "Hurricane",
         "ingredients": [
-          "1 oz light rum",
-          "1 oz dark rum",
-          "0.5 oz lime juice",
-          "1 oz orange juice",
-          "0.5 oz passion fruit syrup",
-          "0.5 oz grenadine"
+          "Light rum",
+          "Dark rum",
+          "Lime juice",
+          "Orange juice",
+          "Passion fruit syrup",
+          "Grenadine"
         ],
         "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f4/Hurricane_at_Pat_O%27Brien%27s.JPG/250px-Hurricane_at_Pat_O%27Brien%27s.JPG",
         "description": "A sweet and potent cocktail, bursting with tropical flavors."
@@ -246,10 +246,10 @@
       {
         "title": "Blue Hawaiian",
         "ingredients": [
-          "1 oz light rum",
-          "1 oz blue cura\u00e7ao",
-          "2 oz pineapple juice",
-          "1 oz cream of coconut"
+          "Light rum",
+          "Blue cura\u00e7ao",
+          "Pineapple juice",
+          "Cream of coconut"
         ],
         "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0c/Drink-Swimming-Pool.jpg/220px-Drink-Swimming-Pool.jpg",
         "description": "A visually striking cocktail with a tropical blend of pineapple and coconut."
@@ -257,10 +257,10 @@
       {
         "title": "Cosmopolitan",
         "ingredients": [
-          "1.5 oz vodka",
-          "0.5 oz triple sec",
-          "0.5 oz cranberry juice",
-          "0.5 oz lime juice"
+          "Vodka",
+          "Triple sec",
+          "Cranberry juice",
+          "Lime juice"
         ],
         "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c0/Cosmopolitan_%285076906532%29.jpg/250px-Cosmopolitan_%285076906532%29.jpg",
         "description": "A chic, fruity cocktail with a crisp cranberry flavor."
@@ -270,9 +270,9 @@
       {
         "title": "Smoky Martini",
         "ingredients": [
-          "2 oz gin",
-          "0.5 oz dry vermouth",
-          "0.25 oz scotch"
+          "Gin",
+          "Dry vermouth",
+          "Scotch"
         ],
         "image": "",
         "description": "A martini with a smoky twist, incorporating a hint of scotch."
@@ -282,13 +282,13 @@
       {
         "title": "Bloody Mary",
         "ingredients": [
-          "1.5 oz vodka",
-          "3 oz tomato juice",
-          "0.5 oz lemon juice",
-          "2 dashes of Worcestershire sauce",
-          "pinch of salt and pepper",
-          "tabasco (to taste)",
-          "celery stalk for garnish"
+          "Vodka",
+          "Tomato juice",
+          "Lemon juice",
+          "Worcestershire sauce",
+          "salt and pepper",
+          "Tabasco (to taste)",
+          "Celery stalk for garnish"
         ],
         "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1f/Bloody_Mary_Coctail_with_celery_stalk_-_Evan_Swigart.jpg/250px-Bloody_Mary_Coctail_with_celery_stalk_-_Evan_Swigart.jpg",
         "description": "A savory cocktail often enjoyed as a brunch staple, seasoned with spices and tomato juice."
