@@ -85,7 +85,11 @@ private fun RowScope.FlavorCategoryButton(
     onClick: () -> Unit,
     modifier: Modifier = Modifier,
 ) {
-    Button(modifier = modifier.weight(1f), onClick = onClick) {
+    Button(
+        modifier = modifier.weight(1f),
+        shape = MaterialTheme.shapes.medium,
+        onClick = onClick,
+    ) {
         Text(text, style = MaterialTheme.typography.h6)
     }
 }

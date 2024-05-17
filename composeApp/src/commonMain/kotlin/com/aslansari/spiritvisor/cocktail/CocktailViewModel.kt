@@ -48,6 +48,8 @@ class CocktailViewModel : BaseViewModel<CocktailUIState>() {
                 copy(
                     title = cocktail.title,
                     cocktailImageUrl = cocktail.image,
+                    ingredients = cocktail.ingredients,
+                    description = cocktail.description,
                 )
             }
         } else {
@@ -112,4 +114,6 @@ data class CocktailUIState(
     val cocktailImageUrl: String = "",
     val selectedIndex: Int = -1,
     val showSuggestAnother: Boolean = false,
+    val ingredients: List<String> = emptyList(),
+    val description: String = "",
 ) : UIState
