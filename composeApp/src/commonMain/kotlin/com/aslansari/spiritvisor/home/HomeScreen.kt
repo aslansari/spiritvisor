@@ -1,15 +1,22 @@
+@file:OptIn(ExperimentalMaterial3WindowSizeClassApi::class)
+
 package com.aslansari.spiritvisor.home
 
 import androidx.compose.foundation.layout.*
 import androidx.compose.material.Button
+import androidx.compose.material.CircularProgressIndicator
 import androidx.compose.material.MaterialTheme
 import androidx.compose.material.Text
+import androidx.compose.material3.windowsizeclass.ExperimentalMaterial3WindowSizeClassApi
+import androidx.compose.material3.windowsizeclass.WindowWidthSizeClass
+import androidx.compose.material3.windowsizeclass.calculateWindowSizeClass
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.getValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
+import androidx.compose.ui.window.Dialog
 import androidx.lifecycle.viewmodel.compose.viewModel
 import com.aslansari.spiritvisor.cocktail.component.CreditText
 
@@ -35,6 +42,14 @@ internal fun HomeScreen(
     uiState: HomeUiState,
     modifier: Modifier = Modifier,
 ) {
+    if (uiState.loading) {
+        Dialog(onDismissRequest = { /*TODO*/ }) {
+            Box(Modifier.fillMaxSize(), contentAlignment = Alignment.Center) {
+                CircularProgressIndicator()
+            }
+        }
+    }
+    val windowSizeClass = calculateWindowSizeClass()
     Box(modifier = modifier.fillMaxSize()) {
         Column(
             modifier = Modifier.fillMaxSize(),
@@ -44,20 +59,20 @@ internal fun HomeScreen(
             Text("Pick a flavor for your cocktail ...", style = MaterialTheme.typography.h4)
             Spacer(Modifier.size(32.dp))
             FlowRow(
-                modifier = Modifier.fillMaxWidth(.5f),
+                modifier = Modifier.padding(16.dp).then(
+                    if (windowSizeClass.widthSizeClass == WindowWidthSizeClass.Expanded) {
+                        Modifier.fillMaxWidth(.5f)
+                    } else {
+                        Modifier.fillMaxWidth()
+                    }
+                ),
                 horizontalArrangement = Arrangement.spacedBy(32.dp),
                 verticalArrangement = Arrangement.spacedBy(16.dp),
                 maxItemsInEachRow = 3,
             ) {
-                FlavorCategoryButton("Sour", onClick = { onClick("Sour") })
-                FlavorCategoryButton("Sweet", onClick = { onClick("Sweet") })
-                FlavorCategoryButton("Salty", onClick = { onClick("Salty") })
-                FlavorCategoryButton("Spicy", onClick = { onClick("Spicy") })
-                FlavorCategoryButton("Bitter", onClick = { onClick("Bitter") })
-                FlavorCategoryButton("Herbal", onClick = { onClick("Herbal") })
-                FlavorCategoryButton("Fruity", onClick = { onClick("Fruity") })
-                FlavorCategoryButton("Smoky", onClick = { onClick("Smoky") })
-                FlavorCategoryButton("Umami", onClick = { onClick("Umami") })
+                uiState.flavors.forEach { flavor ->
+                    FlavorCategoryButton(flavor, onClick = { onClick(flavor) })
+                }
             }
         }
         CreditText(modifier = Modifier.align(Alignment.BottomCenter))
@@ -71,6 +86,6 @@ private fun RowScope.FlavorCategoryButton(
     modifier: Modifier = Modifier,
 ) {
     Button(modifier = modifier.weight(1f), onClick = onClick) {
-        Text(text)
+        Text(text, style = MaterialTheme.typography.h6)
     }
 }

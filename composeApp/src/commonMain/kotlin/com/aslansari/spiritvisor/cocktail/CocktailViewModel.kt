@@ -38,8 +38,7 @@ class CocktailViewModel : BaseViewModel<CocktailUIState>() {
     fun selectCocktailByFlavor(flavor: String) {
         val cocktails = cocktailsByFlavor[flavor]
         if (!cocktails.isNullOrEmpty()) {
-            val randomIndex = cocktails.indices.random()
-            val cocktail = cocktails[randomIndex]
+            val cocktail = cocktails.random()
             setState {
                 copy(
                     title = cocktail.title,
