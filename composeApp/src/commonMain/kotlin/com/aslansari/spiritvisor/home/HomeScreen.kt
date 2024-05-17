@@ -15,6 +15,7 @@ import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.getValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.window.Dialog
@@ -57,7 +58,12 @@ internal fun HomeScreen(
             horizontalAlignment = Alignment.CenterHorizontally,
             verticalArrangement = Arrangement.Center,
         ) {
-            Text("Pick a flavor for your cocktail ...", style = MaterialTheme.typography.h4)
+            Text(
+                modifier = Modifier.padding(horizontal = 16.dp),
+                text = "Pick a flavor for your cocktail ...",
+                style = MaterialTheme.typography.h4,
+                textAlign = TextAlign.Center,
+            )
             Spacer(Modifier.size(32.dp))
             FlowRow(
                 modifier = Modifier.padding(16.dp).then(
