@@ -6,6 +6,8 @@ import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.material.*
 import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.automirrored.filled.ArrowBack
+import androidx.compose.material.icons.filled.Refresh
 import androidx.compose.runtime.*
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
@@ -97,10 +99,16 @@ internal fun CocktailScreen(
             Spacer(Modifier.size(12.dp))
             Row(verticalAlignment = Alignment.CenterVertically, horizontalArrangement = Arrangement.spacedBy(12.dp)) {
                 OutlinedButton(onClick = onBackClick) {
+                    Icon(imageVector = Icons.AutoMirrored.Filled.ArrowBack, contentDescription = "Back")
+                    Spacer(Modifier.size(2.dp))
                     Text("Change Flavor")
                 }
-                OutlinedButton(onClick = onSuggestAnotherClick) {
-                    Text("Suggest Another")
+                if (uiState.showSuggestAnother) {
+                    OutlinedButton(onClick = onSuggestAnotherClick) {
+                        Icon(imageVector = Icons.Default.Refresh, contentDescription = "Refresh")
+                        Spacer(Modifier.size(2.dp))
+                        Text("Suggest Another")
+                    }
                 }
             }
         }
