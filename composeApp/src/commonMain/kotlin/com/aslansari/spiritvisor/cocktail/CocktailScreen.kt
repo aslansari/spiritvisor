@@ -15,6 +15,7 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.StrokeCap
 import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.text.font.FontWeight
+import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
 import androidx.lifecycle.viewmodel.compose.viewModel
 import coil3.compose.SubcomposeAsyncImage
@@ -90,7 +91,12 @@ internal fun CocktailScreen(
             Spacer(Modifier.size(24.dp))
             Text(uiState.title, style = MaterialTheme.typography.h4.copy(fontWeight = FontWeight.SemiBold))
             Spacer(Modifier.size(12.dp))
-            Text(uiState.description, style = MaterialTheme.typography.body2)
+            Text(
+                modifier = Modifier.padding(horizontal = 16.dp),
+                text = uiState.description,
+                style = MaterialTheme.typography.body2,
+                textAlign = TextAlign.Center,
+            )
             Spacer(Modifier.size(12.dp))
             FlowRow(
                 modifier = Modifier,
