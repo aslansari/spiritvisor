@@ -2,25 +2,27 @@
 
 package com.aslansari.spiritvisor.home
 
+import androidx.compose.animation.core.*
 import androidx.compose.foundation.layout.*
-import androidx.compose.material.Button
-import androidx.compose.material.CircularProgressIndicator
-import androidx.compose.material.MaterialTheme
-import androidx.compose.material.Text
+import androidx.compose.material.*
+import androidx.compose.material.icons.Icons
 import androidx.compose.material3.windowsizeclass.ExperimentalMaterial3WindowSizeClassApi
 import androidx.compose.material3.windowsizeclass.WindowWidthSizeClass
 import androidx.compose.material3.windowsizeclass.calculateWindowSizeClass
-import androidx.compose.runtime.Composable
-import androidx.compose.runtime.collectAsState
-import androidx.compose.runtime.getValue
+import androidx.compose.runtime.*
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.draw.alpha
+import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.window.Dialog
+import androidx.compose.ui.zIndex
 import androidx.lifecycle.viewmodel.compose.viewModel
 import com.aslansari.spiritvisor.cocktail.component.CreditText
+import com.aslansari.spiritvisor.theme.icon.HeartSharp
+import kotlinx.coroutines.delay
 
 @Composable
 internal fun HomeRoute(
@@ -53,6 +55,8 @@ internal fun HomeScreen(
     }
     val windowSizeClass = calculateWindowSizeClass()
     Box(modifier = modifier.fillMaxSize()) {
+        var showLove by remember { mutableStateOf(false) }
+        HeartAnimation(showLove = showLove) { showLove = false }
         Column(
             modifier = Modifier.fillMaxSize(),
             horizontalAlignment = Alignment.CenterHorizontally,
@@ -82,7 +86,10 @@ internal fun HomeScreen(
                 }
             }
         }
-        CreditText(modifier = Modifier.align(Alignment.BottomCenter))
+        CreditText(
+            modifier = Modifier.align(Alignment.BottomCenter),
+            onLoveSurge = { showLove = true }
+        )
     }
 }
 
@@ -102,6 +109,32 @@ private fun RowScope.FlavorCategoryButton(
             style = MaterialTheme.typography.h6,
             maxLines = 1,
             overflow = TextOverflow.Ellipsis,
+        )
+    }
+}
+
+@Composable
+internal fun BoxScope.HeartAnimation(
+    modifier: Modifier = Modifier,
+    showLove: Boolean = false,
+    onFinished: () -> Unit = {},
+) {
+    val anim by rememberUpdatedState(showLove)
+    LaunchedEffect(anim) {
+        delay(1000)
+        onFinished()
+    }
+    val heartIconSize by animateDpAsState(targetValue = if (anim) 400.dp else 32.dp, animationSpec = tween(800))
+    val animateAlpha by animateFloatAsState(targetValue = if (anim) 1f else 0f, animationSpec = tween(600))
+    if (anim) {
+        Icon(
+            modifier = modifier.zIndex(1f)
+                .align(Alignment.Center)
+                .alpha(animateAlpha)
+                .size(heartIconSize),
+            imageVector = Icons.HeartSharp,
+            contentDescription = null,
+            tint = Color(0xFFDA1E28)
         )
     }
 }
