@@ -11,6 +11,7 @@ import androidx.compose.material.icons.filled.Refresh
 import androidx.compose.runtime.*
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.StrokeCap
 import androidx.compose.ui.layout.ContentScale
@@ -57,17 +58,18 @@ internal fun CocktailScreen(
         ) {
             // Add content here
             SubcomposeAsyncImage(
-                modifier = Modifier.size(256.dp),
+                modifier = Modifier.height(256.dp).clip(MaterialTheme.shapes.medium),
                 model = uiState.cocktailImageUrl,
                 contentDescription = "Cocktail Image",
                 contentScale = ContentScale.Fit,
                 error = {
                     Surface(
+                        modifier = Modifier.requiredSize(256.dp),
                         color = Color(0xFFDDE1E6),
                         contentColor = Color(0xFF4D5358),
                         shape = CircleShape,
                     ) {
-                        Box(Modifier.size(64.dp), contentAlignment = Alignment.Center) {
+                        Box(Modifier, contentAlignment = Alignment.Center) {
                             Icon(
                                 modifier = Modifier.fillMaxSize(.7f),
                                 imageVector = Icons.LocalBar,
@@ -77,12 +79,14 @@ internal fun CocktailScreen(
                     }
                 },
                 loading = {
-                    CircularProgressIndicator(
-                        modifier = Modifier.size(32.dp),
-                        strokeWidth = 8.dp,
-                        color = MaterialTheme.colors.primary,
-                        strokeCap = StrokeCap.Round,
-                    )
+                    Box(Modifier.fillMaxSize()) {
+                        CircularProgressIndicator(
+                            modifier = Modifier.align(Alignment.Center).fillMaxSize(.5f),
+                            strokeWidth = 4.dp,
+                            color = MaterialTheme.colors.primary,
+                            strokeCap = StrokeCap.Round,
+                        )
+                    }
                 },
                 success = { painter ->
                     SubcomposeAsyncImageContent()
