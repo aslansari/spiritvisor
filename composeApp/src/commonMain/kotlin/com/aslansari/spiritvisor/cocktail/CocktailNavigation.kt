@@ -7,7 +7,7 @@ import androidx.navigation.compose.composable
 const val cocktailRoute = "cocktail_route"
 const val categoryArg = "category"
 
-class CocktailArgs(
+data class CocktailArgs(
     val category: String,
 ) {
     constructor(savedStateHandle: SavedStateHandle) : this(
