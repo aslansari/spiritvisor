@@ -22,6 +22,7 @@ import androidx.lifecycle.viewmodel.compose.viewModel
 import coil3.compose.SubcomposeAsyncImage
 import coil3.compose.SubcomposeAsyncImageContent
 import com.aslansari.spiritvisor.cocktail.component.CreditText
+import com.aslansari.spiritvisor.home.HeartAnimation
 import com.aslansari.spiritvisor.theme.icon.LocalBar
 
 @Composable
@@ -53,6 +54,8 @@ internal fun CocktailScreen(
     modifier: Modifier = Modifier,
 ) {
     Box(modifier = modifier.fillMaxSize(), contentAlignment = Alignment.Center) {
+        var showLove by remember { mutableStateOf(false) }
+        HeartAnimation(showLove = showLove) { showLove = false }
         Column(
             horizontalAlignment = Alignment.CenterHorizontally,
         ) {
@@ -166,6 +169,9 @@ internal fun CocktailScreen(
                 }
             }
         }
-        CreditText(modifier = Modifier.align(Alignment.BottomCenter))
+        CreditText(
+            modifier = Modifier.align(Alignment.BottomCenter),
+            onLoveSurge = { showLove = true },
+        )
     }
 }
