@@ -67,7 +67,7 @@
     "Sweet": [
       {
         "title": "Blue Hawaiian",
-        "imageUrl": "https://www.acouplecooks.com/wp-content/uploads/2021/03/Blue-Hawaii-Drink-001.jpg",
+        "imageUrl": "https://raw.githubusercontent.com/aslansari/spiritvisor/main/composeApp/src/commonMain/composeResources/files/images/blue-hawaiian.webp",
         "description": "A vibrant tropical cocktail that’s as blue as the ocean.",
         "ingredients": [
           "Light rum",
