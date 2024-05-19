@@ -45,7 +45,7 @@
       },
       {
         "title": "Revolver",
-        "imageUrl": "https://raw.githubusercontent.com/aslansari/spiritvisor/develop/composeApp/src/commonMain/composeResources/files/images/revolver.webp",
+        "imageUrl": "https://raw.githubusercontent.com/aslansari/spiritvisor/main/composeApp/src/commonMain/composeResources/files/images/revolver.webp",
         "description": "A boozy and bold cocktail, ideal for coffee lovers with a hint of orange.",
         "ingredients": [
           "Bourbon",
@@ -274,7 +274,7 @@
       },
       {
         "title": "Margarita",
-        "imageUrl": "https://raw.githubusercontent.com/aslansari/spiritvisor/develop/composeApp/src/commonMain/composeResources/files/images/margarita.webp",
+        "imageUrl": "https://raw.githubusercontent.com/aslansari/spiritvisor/main/composeApp/src/commonMain/composeResources/files/images/margarita.webp",
         "description": "A quintessential Mexican cocktail, perfect for any festive occasion.",
         "ingredients": [
           "Tequila",
@@ -379,7 +379,7 @@
       },
       {
         "title": "Piña Colada",
-        "imageUrl": "https://raw.githubusercontent.com/aslansari/spiritvisor/develop/composeApp/src/commonMain/composeResources/files/images/pina-colada.webp",
+        "imageUrl": "https://raw.githubusercontent.com/aslansari/spiritvisor/main/composeApp/src/commonMain/composeResources/files/images/pina-colada.webp",
         "description": "A beloved summer drink that blends pineapple, coconut, and rum into a creamy delight.",
         "ingredients": [
           "Rum",
@@ -432,7 +432,7 @@
       },
       {
         "title": "Hurricane",
-        "imageUrl": "https://raw.githubusercontent.com/aslansari/spiritvisor/develop/composeApp/src/commonMain/composeResources/files/images/hurricane.webp",
+        "imageUrl": "https://raw.githubusercontent.com/aslansari/spiritvisor/main/composeApp/src/commonMain/composeResources/files/images/hurricane.webp",
         "description": "A fruity and potent cocktail with a tropical flair, perfect for sipping on a sunny day.",
         "ingredients": [
           "Light rum",
