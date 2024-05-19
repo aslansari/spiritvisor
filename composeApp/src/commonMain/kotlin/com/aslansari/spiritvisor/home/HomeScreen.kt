@@ -1,4 +1,4 @@
-@file:OptIn(ExperimentalMaterial3WindowSizeClassApi::class)
+@file:OptIn(ExperimentalMaterial3WindowSizeClassApi::class, ExperimentalLayoutApi::class)
 
 package com.aslansari.spiritvisor.home
 
@@ -39,7 +39,6 @@ internal fun HomeRoute(
     )
 }
 
-@OptIn(ExperimentalLayoutApi::class)
 @Composable
 internal fun HomeScreen(
     onClick: (String) -> Unit,
