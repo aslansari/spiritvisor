@@ -9,6 +9,7 @@ import io.ktor.client.request.*
 import io.ktor.client.statement.*
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
+import kotlinx.serialization.SerialName
 import kotlinx.serialization.Serializable
 import kotlinx.serialization.json.Json
 import spiritvisor.composeapp.generated.resources.Res
@@ -87,7 +88,7 @@ class CocktailService(
     }
 
     suspend fun fetchCocktailsByFlavor(): CocktailsByFlavorResponse {
-        val bytes = Res.readBytes("files/cocktails_by_flavor.json")
+        val bytes = Res.readBytes("files/cocktails.json")
         return Json { ignoreUnknownKeys = true }.decodeFromString(bytes.decodeToString())
     }
 }
@@ -108,6 +109,7 @@ data class CocktailsByFlavorResponse(
 data class CocktailDTO(
     val title: String,
     val ingredients: List<String>,
+    @SerialName("imageUrl")
     val image: String,
     val description: String,
 )

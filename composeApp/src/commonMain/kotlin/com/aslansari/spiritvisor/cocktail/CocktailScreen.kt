@@ -79,7 +79,7 @@ internal fun CocktailScreen(
                     }
                 },
                 loading = {
-                    Box(Modifier.fillMaxSize()) {
+                    Box(Modifier.requiredSize(256.dp)) {
                         CircularProgressIndicator(
                             modifier = Modifier.align(Alignment.Center).fillMaxSize(.5f),
                             strokeWidth = 4.dp,
