@@ -9,6 +9,7 @@ import io.ktor.client.request.*
 import io.ktor.client.statement.*
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
+import kotlinx.serialization.SerialName
 import kotlinx.serialization.Serializable
 import kotlinx.serialization.json.Json
 import spiritvisor.composeapp.generated.resources.Res
@@ -27,18 +28,24 @@ class CocktailViewModel : BaseViewModel<CocktailUIState>() {
         }
     }
 
+    private suspend fun readFlavors() {
+        if (cocktailsByFlavor.isEmpty()) {
+            cocktailsByFlavor = cocktailService.fetchCocktailsByFlavor().flavors
+        }
+    }
+
     fun updateArgs(args: CocktailArgs) {
         this.args = args
         setState { copy(category = args.category, selectedIndex = -1) }
-        viewModelScope.launch(Dispatchers.Default) {
+        viewModelScope.launch(Dispatchers.Main) {
             selectCocktailByFlavor(args.category)
         }
     }
 
-    private fun selectCocktailByFlavor(flavor: String) {
+    private suspend fun selectCocktailByFlavor(flavor: String) {
+        readFlavors()
         val cocktails = cocktailsByFlavor[flavor]
         if (!cocktails.isNullOrEmpty()) {
-
             setState { copy(showSuggestAnother = cocktails.size > 1) }
 
             val randomIndex = randomExcept(currentState.selectedIndex, cocktails.lastIndex)
@@ -58,7 +65,7 @@ class CocktailViewModel : BaseViewModel<CocktailUIState>() {
     }
 
     private fun randomExcept(except: Int, size: Int): Int {
-        val random = (0 .. size).filter { it != except }.random()
+        val random = (0..size).filter { it != except }.random()
         return random
     }
 
@@ -81,7 +88,7 @@ class CocktailService(
     }
 
     suspend fun fetchCocktailsByFlavor(): CocktailsByFlavorResponse {
-        val bytes = Res.readBytes("files/cocktails_by_flavor.json")
+        val bytes = Res.readBytes("files/cocktails.json")
         return Json { ignoreUnknownKeys = true }.decodeFromString(bytes.decodeToString())
     }
 }
@@ -102,6 +109,7 @@ data class CocktailsByFlavorResponse(
 data class CocktailDTO(
     val title: String,
     val ingredients: List<String>,
+    @SerialName("imageUrl")
     val image: String,
     val description: String,
 )
