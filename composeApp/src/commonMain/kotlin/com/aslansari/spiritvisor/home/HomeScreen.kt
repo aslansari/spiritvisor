@@ -1,4 +1,4 @@
-@file:OptIn(ExperimentalMaterial3WindowSizeClassApi::class)
+@file:OptIn(ExperimentalMaterial3WindowSizeClassApi::class, ExperimentalLayoutApi::class)
 
 package com.aslansari.spiritvisor.home
 
@@ -39,7 +39,6 @@ internal fun HomeRoute(
     )
 }
 
-@OptIn(ExperimentalLayoutApi::class)
 @Composable
 internal fun HomeScreen(
     onClick: (String) -> Unit,
@@ -69,6 +68,11 @@ internal fun HomeScreen(
                 textAlign = TextAlign.Center,
             )
             Spacer(Modifier.size(32.dp))
+            val buttonPadding = if (windowSizeClass.widthSizeClass == WindowWidthSizeClass.Expanded) {
+                32.dp
+            } else {
+                12.dp
+            }
             FlowRow(
                 modifier = Modifier.padding(16.dp).then(
                     if (windowSizeClass.widthSizeClass == WindowWidthSizeClass.Expanded) {
@@ -77,7 +81,7 @@ internal fun HomeScreen(
                         Modifier.fillMaxWidth()
                     }
                 ),
-                horizontalArrangement = Arrangement.spacedBy(32.dp),
+                horizontalArrangement = Arrangement.spacedBy(buttonPadding),
                 verticalArrangement = Arrangement.spacedBy(16.dp),
                 maxItemsInEachRow = 3,
             ) {
@@ -100,7 +104,7 @@ private fun RowScope.FlavorCategoryButton(
     modifier: Modifier = Modifier,
 ) {
     Button(
-        modifier = modifier.height(60.dp).weight(1f),
+        modifier = modifier.height(60.dp).requiredWidthIn(max = 250.dp).weight(1f),
         shape = MaterialTheme.shapes.medium,
         onClick = onClick,
     ) {
