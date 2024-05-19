@@ -45,7 +45,7 @@
       },
       {
         "title": "Revolver",
-        "imageUrl": "https://cdn.diffords.com/contrib/stock-images/2020/03/5e81d6589353a.jpg",
+        "imageUrl": "https://raw.githubusercontent.com/aslansari/spiritvisor/main/composeApp/src/commonMain/composeResources/files/images/revolver.webp",
         "description": "A boozy and bold cocktail, ideal for coffee lovers with a hint of orange.",
         "ingredients": [
           "Bourbon",
@@ -78,7 +78,7 @@
       },
       {
         "title": "Mojito",
-        "imageUrl": "https://cocktailclub.com/_next/image?url=https%3A%2F%2Fcocktailclub.fra1.digitaloceanspaces.com%2F2e0572b8e04ab80e07234a9e4b101e93040de7b158cb81ebcc1a15fac8e35df0%3F&w=3840&q=75",
+        "imageUrl": "https://raw.githubusercontent.com/aslansari/spiritvisor/main/composeApp/src/commonMain/composeResources/files/images/mojito.webp",
         "description": "A refreshing classic with a lively mix of mint and lime.",
         "ingredients": [
           "White rum",
@@ -90,7 +90,7 @@
       },
       {
         "title": "Sidecar",
-        "imageUrl": "https://cocktailclub.com/_next/image?url=https%3A%2F%2Fcocktailclub.fra1.digitaloceanspaces.com%2Fbb5f8ba641481aaefeb84726512bd9f46126d059d4c28390b9485f124fad5c15%3F&w=3840&q=75",
+        "imageUrl": "https://raw.githubusercontent.com/aslansari/spiritvisor/main/composeApp/src/commonMain/composeResources/files/images/sidecar.webp",
         "description": "An elegant and sophisticated cocktail with a citrus twist.",
         "ingredients": [
           "Cognac",
@@ -132,7 +132,7 @@
       },
       {
         "title": "Espresso Martini",
-        "imageUrl": "https://cocktailclub.com/_next/image?url=https%3A%2F%2Fcocktailclub.fra1.digitaloceanspaces.com%2F626c3597332119ce06456424c47dc65d795a21634fb6f1d9f86d5803e063ed1d%3F&w=3840&q=75",
+        "imageUrl": "https://raw.githubusercontent.com/aslansari/spiritvisor/main/composeApp/src/commonMain/composeResources/files/images/espresso-martini.webp",
         "description": "A sophisticated cocktail that combines the rich flavors of coffee and vodka.",
         "ingredients": [
           "Vodka",
@@ -164,7 +164,7 @@
       },
       {
         "title": "Grasshopper",
-        "imageUrl": "https://images.immediate.co.uk/production/volatile/sites/30/2018/09/grasshopper-cocktail-93b5a27.jpg?quality=90&webp=true&resize=300,272",
+        "imageUrl": "https://raw.githubusercontent.com/aslansari/spiritvisor/main/composeApp/src/commonMain/composeResources/files/images/grasshopper.webp",
         "description": "A creamy and minty cocktail that is both refreshing and indulgent.",
         "ingredients": [
           "Crème de menthe",
@@ -174,7 +174,7 @@
       },
       {
         "title": "Brandy Alexander",
-        "imageUrl": "https://cocktailclub.com/_next/image?url=https%3A%2F%2Fcocktailclub.fra1.digitaloceanspaces.com%2F06ab2f07a6cbe5c5ae50383c6d9d92bcb13e78e20b512f22c8d2fdfb763f04fd%3F&w=3840&q=75",
+        "imageUrl": "https://raw.githubusercontent.com/aslansari/spiritvisor/main/composeApp/src/commonMain/composeResources/files/images/brandy-alexander.webp",
         "description": "A creamy and indulgent cocktail that blends brandy with crème de cacao and cream.",
         "ingredients": [
           "Brandy",
@@ -274,7 +274,7 @@
       },
       {
         "title": "Margarita",
-        "imageUrl": "https://cocktailclub.com/_next/image?url=https%3A%2F%2Fcocktailclub.fra1.digitaloceanspaces.com%2F111bbf3b9514eac66c695511342996dd253d50c30256b2cb7cef32e42d1fb4d1%3F&w=3840&q=75",
+        "imageUrl": "https://raw.githubusercontent.com/aslansari/spiritvisor/main/composeApp/src/commonMain/composeResources/files/images/margarita.webp",
         "description": "A quintessential Mexican cocktail, perfect for any festive occasion.",
         "ingredients": [
           "Tequila",
@@ -296,7 +296,7 @@
       },
       {
         "title": "Daiquiri",
-        "imageUrl": "https://cocktailclub.com/_next/image?url=https%3A%2F%2Fcocktailclub.fra1.digitaloceanspaces.com%2Fa9ce5bb8de7a88167825a099e175545284739050bae77c1a19fe6ab71293e350%3F&w=3840&q=75",
+        "imageUrl": "https://raw.githubusercontent.com/aslansari/spiritvisor/main/composeApp/src/commonMain/composeResources/files/images/daiquiri.webp",
         "description": "A simple yet sophisticated rum cocktail with lime and sugar.",
         "ingredients": [
           "White rum",
@@ -318,7 +318,7 @@
     "Herbal": [
       {
         "title": "Mojito",
-        "imageUrl": "https://cocktailclub.com/_next/image?url=https%3A%2F%2Fcocktailclub.fra1.digitaloceanspaces.com%2F2e0572b8e04ab80e07234a9e4b101e93040de7b158cb81ebcc1a15fac8e35df0%3F&w=3840&q=75",
+        "imageUrl": "https://raw.githubusercontent.com/aslansari/spiritvisor/main/composeApp/src/commonMain/composeResources/files/images/mojito.webp",
         "description": "A refreshing classic with a lively mix of mint and lime.",
         "ingredients": [
           "White rum",
@@ -355,7 +355,7 @@
     "Fruity": [
       {
         "title": "Mai Tai",
-        "imageUrl": "https://cocktailclub.com/_next/image?url=https%3A%2F%2Fcocktailclub.fra1.digitaloceanspaces.com%2F4aafe65c35339d515f8ba9a6c1897ac997fdee8d28c73f56b7999f89067cf038%3F&w=3840&q=75",
+        "imageUrl": "https://raw.githubusercontent.com/aslansari/spiritvisor/main/composeApp/src/commonMain/composeResources/files/images/mai-tai.webp",
         "description": "A tropical classic that combines rum, lime, and almond flavors in a refreshing cocktail.",
         "ingredients": [
           "White rum",
@@ -379,7 +379,7 @@
       },
       {
         "title": "Piña Colada",
-        "imageUrl": "https://cocktailclub.com/_next/image?url=https%3A%2F%2Fcocktailclub.fra1.digitaloceanspaces.com%2Fd79029bdf26a8251cfca2c66c9254af2ea43662494567afd05bc86dce852f543%3F&w=3840&q=75",
+        "imageUrl": "https://raw.githubusercontent.com/aslansari/spiritvisor/main/composeApp/src/commonMain/composeResources/files/images/pina-colada.webp",
         "description": "A beloved summer drink that blends pineapple, coconut, and rum into a creamy delight.",
         "ingredients": [
           "Rum",
@@ -420,7 +420,7 @@
       },
       {
         "title": "Blue Hawaiian",
-        "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c7/Bluehawaiian.jpg/250px-Bluehawaiian.jpg",
+        "imageUrl": "https://raw.githubusercontent.com/aslansari/spiritvisor/main/composeApp/src/commonMain/composeResources/files/images/blue-hawaiian.webp",
         "ingredients": [
           "Vodka",
           "Light rum",
@@ -432,7 +432,7 @@
       },
       {
         "title": "Hurricane",
-        "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRrCDkyuxNZw2ll1oFY_VcexayZGY35m8xxeBCLO4-WBw&s",
+        "imageUrl": "https://raw.githubusercontent.com/aslansari/spiritvisor/main/composeApp/src/commonMain/composeResources/files/images/hurricane.webp",
         "description": "A fruity and potent cocktail with a tropical flair, perfect for sipping on a sunny day.",
         "ingredients": [
           "Light rum",
